@@ -1,7 +1,4 @@
 process.stdout.write('prompt > ');
 
-process.stdin.on('data', (data) => {
-  if (data.toString().trim() === 'pwd') {
-    process.stdout.write(process.cwd());
-  }
-});
+const export_pwd = require('./pwd');
+const export_ls = require('./ls');
